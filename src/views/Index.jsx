@@ -1,17 +1,13 @@
 import React from "react";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import ParticleBg from "./components/ParticleBg";
-import ProjectCard from "./components/ProjectCard";
-import Sidebar from "./components/Sidebar";
-import SocialButton from "./components/SocialButton";
-import TimelineCard from "./components/TimelineCard";
+import Button from "./../components/Button";
+import Card from "./../components/Card";
+import ProjectCard from "./../components/ProjectCard";
+import SocialButton from "./../components/SocialButton";
+import TimelineCard from "./../components/TimelineCard";
 
-function App() {
+export const Index = () => {
     return (
-        <div id="particles" className="">
-            <Sidebar></Sidebar>
-            <ParticleBg></ParticleBg>
+        <>
             <section
                 id="particles"
                 className=" min-h-screen flex items-center justify-center p-12 md:p-0">
@@ -91,8 +87,8 @@ function App() {
                     <ProjectCard></ProjectCard>
                 </div>
             </section>
-        </div>
+        </>
     );
-}
+};
 
-export default App;
+export default Index;

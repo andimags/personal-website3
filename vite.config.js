@@ -5,4 +5,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
     plugins: [react()],
     assetsInclude: ["**/*.JPG"],
+    optimizeDeps: {
+        exclude: ["js-big-decimal"],
+    },
 });
