@@ -33,7 +33,7 @@ export const SocialButton = ({ icon }) => {
     };
 
     return (
-        <button className="bg-zinc-800 dark:hover:bg-transparent p-2 font-semibold text-white inline-flex items-center space-x-2 rounded transition-all">
+        <button className="bg-zinc-800/50  backdrop-blur-lg border border-zinc-600/60 dark:hover:bg-transparent p-2 font-semibold text-white inline-flex items-center space-x-2 rounded transition-all">
             {icons[icon]}
         </button>
     );
