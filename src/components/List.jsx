@@ -1,33 +1,32 @@
-const List = ({ list }) => {
+const Table = ({ list }) => {
     return (
-        <ul className="my-4 text-gray-300">
-            {list &&
-                list.map((item, index) => {
+        <table className="mt-4 text-gray-300">
+            <tbody>
+                {list.map((item, index) => {
                     return (
-                        <li className="flex items-start" key={index}>
-                            <svg
-                                className="w-6 h-6 text-lime-500"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                fill="none"
-                                viewBox="0 0 24 24">
-                                <path
-                                    stroke="currentColor"
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M5 11.917 9.724 16.5 19 7.5"
-                                />
-                            </svg>
-
-                            <span className="ml-3">{item}</span>
-                        </li>
+                        <tr key={index}>
+                            <td>
+                                <svg
+                                    className="h-6 w-6 mr-4 text-lime-500"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M5 13l4 4L19 7"
+                                    />
+                                </svg>
+                            </td>
+                            <td className="py-2">{item}</td>
+                        </tr>
                     );
                 })}
-        </ul>
+            </tbody>
+        </table>
     );
 };
 
-export default List;
+export default Table;

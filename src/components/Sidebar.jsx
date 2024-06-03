@@ -2,7 +2,7 @@ import SidebarItem from "./SidebarItem";
 
 export const Sidebar = ({ activeNavItem }) => {
     return (
-        <nav className="z-20 flex shrink-0 grow-0 justify-around gap-4 border-t border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg dark:border-zinc-600/60 dark:bg-zinc-800/50 fixed top-2/4 -translate-y-2/4 left-6 min-h-[auto] min-w-[64px] flex-col rounded-lg border">
+        <nav className="z-20 hidden md:flex shrink-0 grow-0 justify-around gap-4 border-t border-gray-200 bg-white/50 p-2.5 shadow-lg backdrop-blur-lg dark:border-zinc-600/60 dark:bg-zinc-800/50 fixed top-2/4 -translate-y-2/4 left-6 min-h-[auto] min-w-[64px] flex-col rounded-lg border">
             <SidebarItem
                 value={"Home"}
                 active={activeNavItem == "Home" ? true : false}

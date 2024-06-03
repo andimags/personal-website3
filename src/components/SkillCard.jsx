@@ -1,8 +1,23 @@
 import Badge from "./Badge";
 import List from "./List";
 const SkillCard = ({ list, title, skills }) => {
+    const colors = {
+        beginner: {
+            bgColor: "bg-zinc-700",
+            borderColor: "border-zinc-600",
+        },
+        intermediate: {
+            bgColor: "bg-lime-600",
+            borderColor: "border-lime-500",
+        },
+        advanced: {
+            bgColor: "bg-lime-700",
+            borderColor: "border-lime-600",
+        },
+    };
+
     return (
-        <div className="w-full relative flex flex-col rounded-xl bg-zinc-800/50  backdrop-blur-lg border border-zinc-600/60 border-gray-200 bg-clip-border text-white shadow-md hover:scale-105 transition-all">
+        <div className="w-full relative flex flex-col rounded-xl bg-zinc-800/50  backdrop-blur-lg border border-zinc-600/60 border-gray-200 bg-clip-border text-white shadow-md hover:scale-105 transition-all scroll-reveal">
             <div className="p-6">
                 {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -20,10 +35,14 @@ const SkillCard = ({ list, title, skills }) => {
                     {title}
                 </h5>
                 <div className="flex gap-2 flex-wrap">
-                    {skills &&
-                        skills.map((skill, index) => {
-                            return <Badge value={skill} key={index} />;
-                        })}
+                    {Object.entries(skills).map(([key, value]) => (
+                        <Badge
+                            value={key}
+                            bgColor={colors[value].bgColor}
+                            borderColor={colors[value].borderColor}
+                            key={key}
+                        />
+                    ))}
                 </div>
                 {list && <List list={list} />}
             </div>
