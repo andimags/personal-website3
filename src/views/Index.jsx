@@ -6,6 +6,8 @@ import Sidebar from "../components/Sidebar";
 import LccmLibarySystemImage from "./../../public/images/projects/lccm-library-system.png";
 import PersonalWbsiteImage from "./../../public/images/projects/personal-website.png";
 import ShopeastImage from "./../../public/images/projects/shopeast.png";
+import sunSvg from "./../../public/images/sun.webp";
+import waveSvg from "./../../public/images/wave.webp";
 import CvPdf from "./../../public/pdf/cv.pdf";
 import Button from "./../components/Button";
 import ProjectCard from "./../components/ProjectCard";
@@ -65,24 +67,32 @@ export const Index = () => {
             <section
                 id="home-section"
                 ref={homeSectionRef}
-                className="scroll-reveal min-h-screen flex items-center justify-center p-12 md:p-0">
-                <div className="max-w-2xl grid grid-cols-1 items-center justify-center">
+                className="scroll-reveal min-h-screen flex items-center justify-center p-8 md:p-0">
+                <div className="max-w-2xl 2xl:max-w-4xl grid grid-cols-1 items-center justify-center">
                     <div className="text-center drop-shadow-lg	">
                         <div className="relative h-auto">
-                            <p className="absolute -left-0 md:-left-6 -top-4 md:-top-8 text-xl md:text-3xl text-lime-500 font-bold">
+                            <p className="absolute left-0 md:-left-6 -top-4 md:-top-8 text-xl md:text-3xl 2xl:text-5xl text-lime-500 font-bold">
                                 {"<h1>"}
                             </p>
-                            <h1 className="text-6xl md:text-7xl text-white inline">
+                            <img
+                                src={waveSvg}
+                                className="absolute w-16 h-16 md:w-20 md:h-20 2xl:w-24 2xl:h-24 right-0 md:-right-6 -top-4 md:-top-8"
+                            />
+                            <h1 className="text-6xl md:text-7xl 2xl:text-8xl text-white">
                                 Hello, I'm{" "}
                                 <span className="font-black text-white">
                                     Andrea
-                                </span>
+                                </span>{" "}
                             </h1>
-                            <p className="absolute -right-0 md:-right-6 -bottom-4 md:-bottom-8 text-xl md:text-3xl text-lime-500 font-bold">
+                            <img
+                                src={sunSvg}
+                                className="absolute w-16 h-16 md:w-24 md:h-24 2xl:w-28 2xl:h-28 left-0 md:-left-6 -bottom-4 md:-bottom-16"
+                            />
+                            <p className="absolute right-0 md:-right-6 -bottom-4 md:-bottom-8 text-xl 2xl:text-5xl md:text-3xl text-lime-500 font-bold">
                                 {"</h1>"}
                             </p>
                         </div>
-                        <p className="text-xl md:text-3xl text-lime-400 font-semibold mt-4">
+                        <p className="text-xl md:text-3xl 2xl:text-4xl text-lime-400 font-semibold mt-4">
                             Full stack developer, artist, designer.
                         </p>
                         <p className="text-zinc-300 mt-4">
@@ -114,7 +124,7 @@ export const Index = () => {
             <section
                 id="skills-section"
                 ref={skillsSectionRef}
-                className="h-auto p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto">
+                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto">
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg	">
                     My Skills / Expertise
                 </p>
@@ -180,7 +190,7 @@ export const Index = () => {
             <section
                 id="experience-section"
                 ref={experienceSectionRef}
-                className="h-auto p-16">
+                className="h-auto p-8 md:p-16">
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg	">
                     My Experience
                 </p>
@@ -191,7 +201,7 @@ export const Index = () => {
             <section
                 id="awards-section"
                 ref={awardsSectionRef}
-                className="h-auto p-16 max-w-screen-2xl mx-auto">
+                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto">
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg	">
                     My Awards / Certificates
                 </p>
@@ -233,7 +243,7 @@ export const Index = () => {
             <section
                 id="projects-section"
                 ref={projectsSectionRef}
-                className="min-h-screen p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto">
+                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto">
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg">
                     My Projects
                 </p>
