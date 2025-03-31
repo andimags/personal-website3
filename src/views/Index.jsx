@@ -67,7 +67,8 @@ export const Index = () => {
             <section
                 id="home-section"
                 ref={homeSectionRef}
-                className="scroll-reveal min-h-screen flex items-center justify-center p-8 md:p-0">
+                className="scroll-reveal min-h-screen flex items-center justify-center p-8 md:p-0"
+            >
                 <div className="max-w-2xl 2xl:max-w-4xl grid grid-cols-1 items-center justify-center">
                     <div className="text-center drop-shadow-lg	">
                         <div className="relative h-auto">
@@ -96,27 +97,29 @@ export const Index = () => {
                             Full stack developer, artist, designer.
                         </p>
                         <p className="text-zinc-300 mt-4">
-                            I'm a 22-year-old web developer specializing in
-                            Laravel, holding a degree in Information Technology
-                            from the University of the East. Feel free to email
-                            me to get in touch!
+                            I'm a Jr. Full-Stack Developer specializing in
+                            Laravel, React.js, Next.js, and Express.js. I hold a
+                            degree in Information Technology from the University
+                            of the East. Feel free to reach out via email or
+                            LinkedIn!
                         </p>
                         <div className="flex gap-x-2 justify-center mt-4">
                             <Button
                                 value={"Email me"}
-                                url={"mailto:andimagsumbol@gmail.com"}></Button>
+                                url={"mailto:andimagsumbol@gmail.com"}
+                            ></Button>
                             <Button value={"View CV"} url={CvPdf}></Button>
 
                             <SocialButton
                                 icon={"linkedin"}
                                 url={
                                     "https://www.linkedin.com/in/andimagsumbol/"
-                                }></SocialButton>
+                                }
+                            ></SocialButton>
                             <SocialButton
                                 icon={"github"}
-                                url={
-                                    "https://www.github.com/andimags/"
-                                }></SocialButton>
+                                url={"https://www.github.com/andimags/"}
+                            ></SocialButton>
                         </div>
                     </div>
                 </div>
@@ -124,13 +127,14 @@ export const Index = () => {
             <section
                 id="skills-section"
                 ref={skillsSectionRef}
-                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto">
+                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto"
+            >
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg	">
                     My Skills / Expertise
                 </p>
                 <div className="flex gap-x-8 justify-center mb-4">
                     <div className="flex items-center">
-                        <div className="w-4 h-4 bg-lime-700 border border-lime-600 mr-2"></div>
+                        <div className="w-4 h-4 bg-lime-800 border border-lime-700 mr-2"></div>
                         <p className="text-white text-sm">Advanced</p>
                     </div>
                     <div className="flex items-center">
@@ -144,64 +148,122 @@ export const Index = () => {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 grid-auto-rows">
                     <SkillCard
-                        title={"Languages"}
-                        skills={{
-                            PHP: "advanced",
-                            Javascript: "intermediate",
-                            Python: "intermediate",
-                            "C#": "beginner",
-                            "C++": "beginner",
-                            Java: "beginner",
-                        }}
+                        title="Languages"
+                        skills={[
+                            { name: "PHP", level: "advanced" },
+                            { name: "Javascript", level: "intermediate" },
+                            { name: "Python", level: "intermediate" },
+                            { name: "C#", level: "beginner" },
+                            { name: "C++", level: "beginner" },
+                            { name: "Java", level: "beginner" },
+                        ]}
                         className="scroll-reveal"
                     />
+
                     <SkillCard
-                        title={"Frameworks"}
-                        skills={{
-                            Laravel: "advanced",
-                            Bootstrap: "advanced",
-                            Tailwind: "advanced",
-                        }}
+                        title="Frameworks"
+                        skills={[
+                            { name: "Laravel", level: "advanced" },
+                            { name: "Bootstrap", level: "advanced" },
+                            { name: "Tailwind", level: "advanced" },
+                            { name: "Express.js", level: "intermediate" },
+                            { name: "Next.js", level: "intermediate" },
+                        ]}
                     />
+
                     <SkillCard
-                        title={"Libraries"}
-                        skills={{
-                            jQuery: "advanced",
-                            Livewire: "intermediate",
-                            React: "intermediate",
-                            Axios: "intermediate",
-                            Inertia: "beginner",
-                            "Alpine.js": "beginner",
-                        }}
+                        title="Libraries"
+                        skills={[
+                            { name: "jQuery", level: "intermediate" },
+                            { name: "Livewire", level: "intermediate" },
+                            { name: "React", level: "intermediate" },
+                            { name: "Axios", level: "intermediate" },
+                        ]}
                     />
+
                     <SkillCard
-                        title={"Database"}
-                        skills={{
-                            MySQL: "advanced",
-                            "Microsoft SQL": "intermediate",
-                        }}
+                        title="Database"
+                        skills={[{ name: "MySQL", level: "advanced" }]}
                     />
+
                     <SkillCard
-                        title={"Version Control"}
-                        skills={{ Git: "intermediate", GitHub: "intermediate" }}
+                        title="Version Control & Tools"
+                        skills={[
+                            { name: "Postman", level: "advanced" },
+                            { name: "VS Code", level: "advanced" },
+                            { name: "Git", level: "intermediate" },
+                            { name: "GitHub", level: "intermediate" },
+                            { name: "Bitbucket", level: "intermediate" },
+                            { name: "GitLab", level: "intermediate" },
+                            { name: "Jira", level: "intermediate" },
+                            { name: "DBeaver", level: "intermediate" },
+                        ]}
+                    />
+
+                    <SkillCard
+                        title="Cloud Services"
+                        skills={[
+                            { name: "AWS S3", level: "intermediate" },
+                            { name: "AWS EC2", level: "intermediate" },
+                            { name: "AWS RDS", level: "intermediate" },
+                        ]}
                     />
                 </div>
             </section>
             <section
                 id="experience-section"
                 ref={experienceSectionRef}
-                className="h-auto p-8 md:p-16">
+                className="h-auto p-8 md:p-16"
+            >
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg	">
                     My Experience
                 </p>
                 <div className="max-w-xl mx-auto">
-                    <ExperienceCard />
+                    <ExperienceCard
+                        className={"mb-8"}
+                        jobTitle="Jr. Full Stack Developer"
+                        dateRange="July 2024 - Present"
+                        skills={[
+                            { name: "Bootstrap", level: "advanced" },
+                            { name: "Javascript", level: "intermediate" },
+                            { name: "Next.js", level: "intermediate" },
+                            { name: "Express.js", level: "intermediate" },
+                            { name: "React.js", level: "intermediate" },
+                            { name: "MySQL", level: "intermediate" },
+                            { name: "AWS", level: "intermediate" }
+                        ]}
+                        experience={[
+                            "Led the development and ongoing maintenance of the WebSSI revamp and enhancements",
+                            "Managed deployments to UAT and production environments on AWS"
+                        ]}
+                    />
+                    
+                    <ExperienceCard
+                        jobTitle="Full Stack Developer Intern"
+                        dateRange="February 2024 - May 2024"
+                        skills={[
+                            { name: "PHP", level: "advanced" },
+                            { name: "Laravel", level: "advanced" },
+                            { name: "Tailwind", level: "advanced" },
+                            { name: "Javascript", level: "intermediate" },
+                            { name: "jQuery", level: "intermediate" },
+                            { name: "Bootstrap", level: "intermediate" },
+                            { name: "Livewire", level: "beginner" },
+                        ]}
+                        experience={[
+                            "Developed and documented two solo projects: HR Recruitment System & CRM System",
+                            "Presented system proposal and created flowchart for HR Recruitment System",
+                            "Collaborated effectively with developers, sharing ideas and contributing to project success",
+                            "Basic proficiency in version control with Git and GitHub for collaborative development",
+                        ]}
+                    />
                 </div>
             </section>
             <section
                 id="awards-section"
                 ref={awardsSectionRef}
-                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto">
+                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto"
+            >
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg	">
                     My Awards / Certificates
                 </p>
@@ -210,40 +272,36 @@ export const Index = () => {
                         <TimelineCard
                             date={"Dec 2023"}
                             title={"Programming Skills Evaluation"}
-                            description={
-                                "University of the East"
-                            }></TimelineCard>
+                            description={"University of the East"}
+                        ></TimelineCard>
                         <TimelineCard
                             date={"Dec 2023"}
                             title={"IT Specialist in Python"}
-                            description={
-                                "Certiport: Pearson VUE"
-                            }></TimelineCard>
+                            description={"Certiport: Pearson VUE"}
+                        ></TimelineCard>
                         <TimelineCard
                             date={"Nov 2023"}
                             title={"IT Specialist in HTML & CSS"}
-                            description={
-                                "Certiport: Pearson VUE"
-                            }></TimelineCard>
+                            description={"Certiport: Pearson VUE"}
+                        ></TimelineCard>
                         <TimelineCard
                             date={"Nov 2023"}
                             title={"2nd Place - Best in Thesis"}
-                            description={
-                                "University of the East"
-                            }></TimelineCard>
+                            description={"University of the East"}
+                        ></TimelineCard>
                         <TimelineCard
                             date={"Mar 2022"}
                             title={"3rd Place - Website Designing Competition"}
-                            description={
-                                "University of the East CCSS"
-                            }></TimelineCard>
+                            description={"University of the East CCSS"}
+                        ></TimelineCard>
                     </div>
                 </div>
             </section>
             <section
                 id="projects-section"
                 ref={projectsSectionRef}
-                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto">
+                className="h-auto p-8 md:p-16 max-w-screen-2xl mx-auto md:ml-16 2xl:ml-auto"
+            >
                 <p className="text-4xl text-gray-900 dark:text-white text-center font-bold mb-4 drop-shadow-lg">
                     My Projects
                 </p>
@@ -257,7 +315,8 @@ export const Index = () => {
                         }
                         url={
                             "https://www.github.com/andimags/lccm-library-system"
-                        }></ProjectCard>
+                        }
+                    ></ProjectCard>
                     <ProjectCard
                         src={PersonalWbsiteImage}
                         title={"Personal Wesbite"}
@@ -265,9 +324,8 @@ export const Index = () => {
                         description={
                             "My first personal website developed with HTML, CSS, vanilla JS, and Bootstrap for media queries."
                         }
-                        url={
-                            "https://www.github.com/andimags/personal-website"
-                        }></ProjectCard>
+                        url={"https://www.github.com/andimags/personal-website"}
+                    ></ProjectCard>
                     <ProjectCard
                         src={ShopeastImage}
                         title={"ShopEast 2.0"}
@@ -275,9 +333,8 @@ export const Index = () => {
                         description={
                             "3rd Place Winner in USC's ShopEast Website Design Competition. Developed using HTML, CSS, jQuery, and Bootstrap for responsive design and media queries. Aiding UE students in online selling during quarantine."
                         }
-                        url={
-                            "https://www.github.com/andimags/shopeast"
-                        }></ProjectCard>
+                        url={"https://www.github.com/andimags/shopeast"}
+                    ></ProjectCard>
                 </div>
             </section>
         </>
